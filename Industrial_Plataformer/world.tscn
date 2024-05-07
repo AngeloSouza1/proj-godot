@@ -27,11 +27,14 @@ layer_2/tile_data = PackedInt32Array()
 position = Vector2(76.2499, 243.75)
 motion_mode = 1
 script = ExtResource("2_1u7ij")
+speed = 5
+lerp_factor = 0.075
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CircleShape2D_p5c82")
 
-[node name="ShipBlueManned" type="Sprite2D" parent="Player"]
+[node name="Sprite" type="Sprite2D" parent="Player"]
+unique_name_in_owner = true
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("3_2dp6y")
 
