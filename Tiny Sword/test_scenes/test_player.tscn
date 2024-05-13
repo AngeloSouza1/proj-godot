@@ -127,3 +127,4 @@ text = "attack_down_2
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_icpam")]
+position = Vector2(383, 249)
