@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bar30lhtf2mw0"]
+
+[ext_resource type="Texture2D" uid="uid://x1t1sao0b0ae" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_yq4uw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_04y01"]
+radius = 17.0
+height = 58.0
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -29)
+texture = ExtResource("1_yq4uw")
+hframes = 6
+vframes = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -28)
+shape = SubResource("CapsuleShape2D_04y01")
+debug_color = Color(0, 0.6, 0.701961, 0.321569)
