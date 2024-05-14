@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @export var speed: float = 3
+@export var sword_damage: float = 2
 @onready var sprite: Sprite2D = $Sprite2D
 
 var input_vector: Vector2 =  Vector2(0, 0)
@@ -68,6 +69,11 @@ func attack() -> void:
 	
 	# Marcar ataque
 	is_attacking = true
+	
+func deal_damage_to_enemies() -> void:
+	var enemies = get_tree().get_nodes_in_group("enemies")
+	for enemy in enemies:
+		enemy.damage(sword_damage)
 
 func play_run_idle_animation() -> void:
 	#Tocar animação

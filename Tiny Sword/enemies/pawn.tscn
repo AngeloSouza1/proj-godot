@@ -58,7 +58,7 @@ animations = [{
 radius = 24.0
 height = 52.0
 
-[node name="Pawn" type="CharacterBody2D"]
+[node name="Pawn" type="CharacterBody2D" groups=["enemies"]]
 motion_mode = 1
 script = ExtResource("1_nah0x")
 
@@ -66,7 +66,7 @@ script = ExtResource("1_nah0x")
 position = Vector2(1, -30)
 sprite_frames = SubResource("SpriteFrames_ghb4g")
 autoplay = "default"
-frame_progress = 0.46839
+frame_progress = 0.23615
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -27)
