@@ -130,33 +130,11 @@ metadata/_edit_use_anchors_ = true
 [node name="Player" parent="." instance=ExtResource("2_icpam")]
 position = Vector2(383, 249)
 
-[node name="Player2" parent="." instance=ExtResource("2_icpam")]
-position = Vector2(227, 366)
-motion_mode = 0
-
-[node name="Player3" parent="." instance=ExtResource("2_icpam")]
-position = Vector2(125, 156)
-motion_mode = 0
-
-[node name="Player4" parent="." instance=ExtResource("2_icpam")]
-position = Vector2(122, 233)
-motion_mode = 0
-
-[node name="Player5" parent="." instance=ExtResource("2_icpam")]
-position = Vector2(112, 313)
-motion_mode = 0
-
-[node name="Player6" parent="." instance=ExtResource("2_icpam")]
-position = Vector2(242, 109)
-motion_mode = 0
-
-[node name="Player7" parent="." instance=ExtResource("2_icpam")]
-position = Vector2(238, 185)
-motion_mode = 0
-
-[node name="Player8" parent="." instance=ExtResource("2_icpam")]
-position = Vector2(235, 270)
-motion_mode = 0
-
 [node name="Pawn" parent="." instance=ExtResource("3_1je7j")]
-position = Vector2(774, 336)
+position = Vector2(691, 205)
+
+[node name="Pawn2" parent="." instance=ExtResource("3_1je7j")]
+position = Vector2(774, 170)
+
+[node name="Pawn3" parent="." instance=ExtResource("3_1je7j")]
+position = Vector2(712, 136)
