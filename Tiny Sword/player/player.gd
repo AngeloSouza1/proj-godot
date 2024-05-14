@@ -4,12 +4,14 @@ extends CharacterBody2D
 @export var speed: float = 3
 @export var sword_damage: float = 2
 @onready var sprite: Sprite2D = $Sprite2D
+@onready var sword_area: Area2D = $SwordArea
 
 var input_vector: Vector2 =  Vector2(0, 0)
 var is_running: bool = false
 var was_running: bool = false
 var is_attacking: bool = false
 var attack_cooldown: float= 0.0
+
 
 func _process(delta: float) -> void:
 	GameManager.player_position = position
@@ -71,9 +73,12 @@ func attack() -> void:
 	is_attacking = true
 	
 func deal_damage_to_enemies() -> void:
-	var enemies = get_tree().get_nodes_in_group("enemies")
-	for enemy in enemies:
-		enemy.damage(sword_damage)
+	var bodies = sword_area.get_overlapping_bodies()
+	for body in bodies:
+		if body.is_in_group("enemies"):
+			var enemy: Enemy = body
+			enemy.damage(sword_damage)
+	
 
 func play_run_idle_animation() -> void:
 	#Tocar animação
