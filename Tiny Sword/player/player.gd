@@ -27,7 +27,8 @@ func _process(delta: float) -> void:
 
 	# Processar animação e rotação de sprite
 	play_run_idle_animation()
-	rotate_sprite()
+	if not is_attacking:
+		rotate_sprite()
 
 func update_attack_cooldown(delta: float) -> void:
 	# Atualizar temporizador do ataque
