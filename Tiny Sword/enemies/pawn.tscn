@@ -62,13 +62,14 @@ height = 52.0
 [node name="Pawn" type="CharacterBody2D" groups=["enemies"]]
 motion_mode = 1
 script = ExtResource("1_nah0x")
+health = 3
 death_prefab = ExtResource("2_odjca")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -30)
 sprite_frames = SubResource("SpriteFrames_ghb4g")
 autoplay = "default"
-frame_progress = 0.956229
+frame_progress = 0.757395
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -27)
@@ -76,3 +77,4 @@ shape = SubResource("CapsuleShape2D_qm85l")
 
 [node name="FollowPlayer" type="Node" parent="."]
 script = ExtResource("1_6a77l")
+speed = 0.75

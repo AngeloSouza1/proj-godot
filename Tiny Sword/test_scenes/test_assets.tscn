@@ -44,7 +44,7 @@ position = Vector2(-4939, -969)
 texture = ExtResource("7_5q7gq")
 
 [node name="TorchBlue" type="Sprite2D" parent="."]
-position = Vector2(-3355, -914)
+position = Vector2(-3494, -2676)
 texture = ExtResource("8_lq8ka")
 
 [node name="TntBlue" type="Sprite2D" parent="."]
@@ -62,3 +62,7 @@ texture = ExtResource("11_gv7aj")
 [node name="Dead" type="Sprite2D" parent="."]
 position = Vector2(-5018, -2024)
 texture = ExtResource("12_434my")
+
+[node name="HappySheepAll2" type="Sprite2D" parent="."]
+position = Vector2(-2099, -2663)
+texture = ExtResource("11_gv7aj")
