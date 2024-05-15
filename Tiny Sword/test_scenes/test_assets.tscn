@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dkpppom7bqvv"]
+[gd_scene load_steps=15 format=3 uid="uid://dkpppom7bqvv"]
 
 [ext_resource type="Texture2D" uid="uid://c2q7roph72sg6" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Shadows.png" id="1_lkays"]
 [ext_resource type="Texture2D" uid="uid://3j2usmvee2hw" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="2_wfgk8"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bdn7rgd8hkgt7" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Factions/Goblins/Troops/Barrel/Blue/Barrel_Blue.png" id="10_bjlcb"]
 [ext_resource type="Texture2D" uid="uid://by8b06b4i2vt2" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Resources/Sheep/HappySheep_All.png" id="11_gv7aj"]
 [ext_resource type="Texture2D" uid="uid://dxih523msxked" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Dead/Dead.png" id="12_434my"]
+[ext_resource type="Texture2D" uid="uid://c32at3i240s3h" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Resources/Resources/W_Spawn.png" id="13_wnsm3"]
+[ext_resource type="Texture2D" uid="uid://bg77po57gyt7p" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Resources/Resources/M_Spawn.png" id="14_l4i4s"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -66,3 +68,12 @@ texture = ExtResource("12_434my")
 [node name="HappySheepAll2" type="Sprite2D" parent="."]
 position = Vector2(-2099, -2663)
 texture = ExtResource("11_gv7aj")
+
+[node name="WSpawn" type="Sprite2D" parent="."]
+position = Vector2(555, -112)
+scale = Vector2(1.00619, 1.0715)
+texture = ExtResource("13_wnsm3")
+
+[node name="MSpawn" type="Sprite2D" parent="."]
+position = Vector2(564, -325)
+texture = ExtResource("14_l4i4s")

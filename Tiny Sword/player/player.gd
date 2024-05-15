@@ -1,9 +1,11 @@
+class_name Player
 extends CharacterBody2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @export var speed: float = 3
 @export var sword_damage: float = 2
 @export var health: int = 100
+@export var max_health: int = 100 
 @export var death_prefab: PackedScene
 
 
@@ -134,7 +136,7 @@ func update_hitbox_detection(delta: float) -> void:
 func damage(amount: int) -> void:
 	if health <= 0: return
 	health -= amount
-	print("Player recebeu dano de ", amount, ". A vida total é de ", health)
+	print("Player recebeu dano de ", amount, ". A vida total é de ", health,"/", max_health)
 	#Piscar node 
 	modulate = Color.RED
 	var tween = create_tween()
@@ -153,3 +155,16 @@ func die() -> void:
 		get_parent().add_child(death_object)
 	print("Player morreu!")	
 	queue_free()	
+
+func heal(amount: int) -> int: 
+	health += amount
+	if  health > max_health:
+		health = max_health
+	print("Player recebeu cura de ", amount, ". A vida total é de ", health, "/", max_health)	
+	return health
+	
+	
+	
+	
+	
+	
