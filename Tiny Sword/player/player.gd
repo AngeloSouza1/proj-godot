@@ -1,14 +1,21 @@
 class_name Player
 extends CharacterBody2D
 
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
+@export_category("Moviment")
 @export var speed: float = 3
+@export_category("Sword")
 @export var sword_damage: float = 2
+@export_category("Ritual")
+@export var ritual_damage: int = 1
+@export var ritual_interval: float = 30
+@export var ritual_scene: PackedScene
+@export_category("Life")
 @export var health: int = 100
 @export var max_health: int = 100 
 @export var death_prefab: PackedScene
 
-
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var sword_area: Area2D = $SwordArea
 @onready var hitbox_area: Area2D = $HitboxArea
@@ -19,6 +26,9 @@ var was_running: bool = false
 var is_attacking: bool = false
 var attack_cooldown: float= 0.0
 var hitbox_cooldown: float= 0.0
+var ritual_cooldown: float= 0.0
+
+
 
 func _process(delta: float) -> void:
 	GameManager.player_position = position
@@ -38,6 +48,22 @@ func _process(delta: float) -> void:
 		rotate_sprite()
 	# Processar dano
 	update_hitbox_detection(delta)
+	
+	# Ritual
+	update_ritual(delta)
+	
+	
+func update_ritual(delta: float) -> void: 
+	# Atualizar o temporizador
+	ritual_cooldown -= delta
+	if ritual_cooldown > 0: return
+	ritual_cooldown = ritual_interval
+	
+	# Criar o ritual
+	var ritual = ritual_scene.instantiate()
+	ritual.damage_amount = ritual_damage
+	add_child(ritual)
+	
 	
 
 func update_attack_cooldown(delta: float) -> void:

@@ -23,7 +23,7 @@ curve = SubResource("Curve2D_hjp1k")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
-position = Vector2(6.56607, 367.06)
+position = Vector2(6.56802, 367.06)
 rotation = -3.1104
 progress = 3651.85
 
