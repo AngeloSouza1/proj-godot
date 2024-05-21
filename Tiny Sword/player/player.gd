@@ -19,6 +19,9 @@ extends CharacterBody2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var sword_area: Area2D = $SwordArea
 @onready var hitbox_area: Area2D = $HitboxArea
+@onready var health_progress_bar: ProgressBar = $HealthProgressBar
+
+
 
 var input_vector: Vector2 =  Vector2(0, 0)
 var is_running: bool = false
@@ -52,6 +55,10 @@ func _process(delta: float) -> void:
 	# Ritual
 	update_ritual(delta)
 	
+	# Atualizar health bar
+	health_progress_bar.max_value = max_health
+	health_progress_bar.value = health
+	
 	
 func update_ritual(delta: float) -> void: 
 	# Atualizar o temporizador
@@ -63,8 +70,6 @@ func update_ritual(delta: float) -> void:
 	var ritual = ritual_scene.instantiate()
 	ritual.damage_amount = ritual_damage
 	add_child(ritual)
-	
-	
 
 func update_attack_cooldown(delta: float) -> void:
 	# Atualizar temporizador do ataque

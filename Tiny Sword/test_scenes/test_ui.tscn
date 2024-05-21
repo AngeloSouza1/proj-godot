@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6chox1ecw45u"]
+[gd_scene load_steps=6 format=3 uid="uid://b6chox1ecw45u"]
 
 [ext_resource type="PackedScene" uid="uid://bar30lhtf2mw0" path="res://player/player.tscn" id="1_5rsf4"]
 [ext_resource type="Texture2D" uid="uid://dkt87d1cra2g4" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="2_hn5mh"]
+[ext_resource type="PackedScene" uid="uid://ch8p7pk6ryv8i" path="res://enemies/goblin.tscn" id="3_dwf3h"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvaiq"]
 texture = ExtResource("2_hn5mh")
@@ -85,3 +86,6 @@ scale = Vector2(2.21225, 1.47854)
 text = "20.000 Gold
 "
 label_settings = SubResource("LabelSettings_0867c")
+
+[node name="Goblin" parent="." instance=ExtResource("3_dwf3h")]
+position = Vector2(538, 366)
