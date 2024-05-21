@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6chox1ecw45u"]
+[gd_scene load_steps=9 format=3 uid="uid://b6chox1ecw45u"]
 
 [ext_resource type="PackedScene" uid="uid://bar30lhtf2mw0" path="res://player/player.tscn" id="1_5rsf4"]
 [ext_resource type="Texture2D" uid="uid://dkt87d1cra2g4" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="2_hn5mh"]
 [ext_resource type="PackedScene" uid="uid://ch8p7pk6ryv8i" path="res://enemies/goblin.tscn" id="3_dwf3h"]
+[ext_resource type="PackedScene" uid="uid://drcxgnbmxm5sr" path="res://enemies/sheep.tscn" id="4_e4up2"]
+[ext_resource type="PackedScene" uid="uid://be0xrlirsidla" path="res://enemies/duende.tscn" id="5_ap06x"]
+[ext_resource type="PackedScene" uid="uid://t3agt3ypbd73" path="res://enemies/pawn.tscn" id="6_81oi8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvaiq"]
 texture = ExtResource("2_hn5mh")
@@ -89,3 +92,15 @@ label_settings = SubResource("LabelSettings_0867c")
 
 [node name="Goblin" parent="." instance=ExtResource("3_dwf3h")]
 position = Vector2(538, 366)
+
+[node name="Sheep" parent="." instance=ExtResource("4_e4up2")]
+position = Vector2(285, 567)
+
+[node name="Sheep2" parent="." instance=ExtResource("4_e4up2")]
+position = Vector2(814, 345)
+
+[node name="Duende" parent="." instance=ExtResource("5_ap06x")]
+position = Vector2(205, 116)
+
+[node name="Pawn" parent="." instance=ExtResource("6_81oi8")]
+position = Vector2(614, 472)
