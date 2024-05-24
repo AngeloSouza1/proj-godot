@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cbe1x85doqqqr"]
+[gd_scene load_steps=28 format=3 uid="uid://cbe1x85doqqqr"]
 
 [ext_resource type="PackedScene" uid="uid://bar30lhtf2mw0" path="res://player/player.tscn" id="1_524t7"]
 [ext_resource type="PackedScene" uid="uid://dxfg5bgr2q50w" path="res://systems/mob_spawner.tscn" id="2_7l62g"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c4bvttt6k5pcv" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Resources/Gold Mine/GoldMine_Destroyed.png" id="12_sg8o5"]
 [ext_resource type="Texture2D" uid="uid://c0iic0l561b0g" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Resources/Gold Mine/GoldMine_Inactive.png" id="13_8jo2k"]
 [ext_resource type="Script" path="res://systems/difficulty_system.gd" id="14_1813f"]
+[ext_resource type="PackedScene" uid="uid://b4jglmwhg3pff" path="res://ui/game_over_ui.tscn" id="15_j1ktg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5o2g8"]
 texture = ExtResource("5_viplj")
@@ -319,3 +320,5 @@ mob_spawner = NodePath("../MobSpawner")
 initial_spawn_rate = 30.0
 spawn_rate_per_minute = 60.0
 break_intensity = 0.33
+
+[node name="GameOverUI" parent="." instance=ExtResource("15_j1ktg")]
