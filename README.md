@@ -11,7 +11,7 @@
 <div align="center">
 <br>
 <br> 
-  Trilha Godot
+  Trilha Godot - Santander 2024 - Criando Jogos com Godot
  </div>
 
 
