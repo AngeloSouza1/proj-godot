@@ -1,13 +1,28 @@
- <div align="justify">
 <a name="top"></a>
-<div style="display: flex; align-items: center; justify-content: space-between;">
-  <img src="godot.png" alt="Descrição da imagem" style="width: 25%;">
-  <h1 style="margin: 0;">Trilha Godot</h1>
-</div>
 
-## Descrição
 
+
+<p align="center">
+  <img src="godot.png" alt="Descrição da imagem" style="width: 25%;>
+ </p>
+
+<br>
+
+<div align="center">
+<br>
+<br> 
+  Trilha Godot
+ </div>
+
+
+
+
+
+
+ ## Descrição
+<div align="justify">
 Este repositório contém os projetos e exercícios desenvolvidos durante o bootcamp "Trilha Godot". Este bootcamp teve como objetivo fornecer uma compreensão profunda do Godot Engine, uma poderosa ferramenta open-source para desenvolvimento de jogos. Aqui você encontrará desde projetos simples, focados em mecânicas básicas, até projetos mais complexos, demonstrando funcionalidades avançadas da engine.
+</div>
 
 ## Índice
 
@@ -86,7 +101,7 @@ Voltar
 
 ## Visualização do Projeto
 
-https://vimeo.com/950045452/5dce1579a8
+
 
 <a href="#top">
 Voltar
