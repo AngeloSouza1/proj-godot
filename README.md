@@ -127,6 +127,3 @@ Este projeto está licenciado sob a MIT License.
 Voltar
 </a>
 
-
-<a href="#top" style="background-color: blue; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px;">Voltar</a>
-```
