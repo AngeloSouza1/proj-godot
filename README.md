@@ -101,7 +101,8 @@ Voltar
 
 ## Visualização do Projeto
 
-[Clique aqui para ver o vídeo](https://github.com/AngeloSouza1/proj-godot/blob/main/Tiny%20Sword/Temp/game-_24_05_2024%2C_17_22_19%20(540p).mp4)
+![Vídeo do Jogo](https://github.com/AngeloSouza1/proj-godot/raw/main/Tiny%20Sword/Temp/game-_24_05_2024%2C_17_22_19%20(540p).mp4)
+
 
 <a href="#top">
 Voltar
