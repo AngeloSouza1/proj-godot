@@ -9,7 +9,12 @@ extends Node
 var time: float = 0.0
 
 func _process(delta: float) -> void:
+	# Ignorar GameOver
+	if GameManager.is_game_over: return
+	
+	# Incrementar temporizador
 	time += delta
+	
 	# Dificuldade linear  (Linha verde)
 	var spawn_rate = initial_spawn_rate + spawn_rate_per_minute * (time	/60.0)
 	

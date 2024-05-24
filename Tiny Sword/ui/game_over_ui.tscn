@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4jglmwhg3pff"]
+[gd_scene load_steps=12 format=3 uid="uid://b4jglmwhg3pff"]
 
 [ext_resource type="Texture2D" uid="uid://duet4jv0u6sc4" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_pi56v"]
+[ext_resource type="Script" path="res://ui/game_over_ui.gd" id="1_rr1dj"]
 [ext_resource type="Texture2D" uid="uid://dkt87d1cra2g4" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="2_do5oo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m27p7"]
@@ -11,6 +12,7 @@ axis_stretch_horizontal = 2
 
 [sub_resource type="SystemFont" id="SystemFont_wpljl"]
 font_weight = 999
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_6ryhp"]
 font = SubResource("SystemFont_wpljl")
@@ -30,6 +32,45 @@ region_rect = Rect2(32, 48, 128, 128)
 [sub_resource type="LabelSettings" id="LabelSettings_drchk"]
 font_size = 28
 font_color = Color(0.054902, 0.054902, 0.054902, 0.882353)
+
+[sub_resource type="Animation" id="Animation_2m2je"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.00392157, 0.00392157, 0.00392157, 0.670588)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(349, 34)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BottonPanel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(320, 398)]
+}
 
 [sub_resource type="Animation" id="Animation_pi78m"]
 resource_name = "default"
@@ -71,45 +112,6 @@ tracks/2/keys = {
 "values": [Vector2(331, 751), Vector2(320, 398)]
 }
 
-[sub_resource type="Animation" id="Animation_2m2je"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Background:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.00392157, 0.00392157, 0.00392157, 0.670588)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TopPanel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(349, 34)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("BottonPanel:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(320, 398)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_86t04"]
 _data = {
 "RESET": SubResource("Animation_2m2je"),
@@ -117,6 +119,7 @@ _data = {
 }
 
 [node name="GameOverUI" type="CanvasLayer"]
+script = ExtResource("1_rr1dj")
 
 [node name="Background" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -124,15 +127,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.0431373, 0.0431373, 0.0431373, 0.898039)
+color = Color(0.00392157, 0.00392157, 0.00392157, 0.670588)
 
 [node name="TopPanel" type="Panel" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -227.0
+offset_left = 349.0
 offset_top = 34.0
-offset_right = 289.0
+offset_right = 865.0
 offset_bottom = 166.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_m27p7")
@@ -159,10 +162,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -256.0
-offset_top = -250.0
-offset_right = 346.0
-offset_bottom = -42.0001
+offset_left = 320.0
+offset_top = 398.0
+offset_right = 922.0
+offset_bottom = 606.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_6r50p")
@@ -206,7 +209,7 @@ text = "Monsters Defeated:
 "
 label_settings = SubResource("LabelSettings_drchk")
 
-[node name="MonsterLabel" type="Label" parent="BottonPanel/CenterContainer/GridContainer"]
+[node name="MonstersLabel" type="Label" parent="BottonPanel/CenterContainer/GridContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "1234

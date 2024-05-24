@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://cbe1x85doqqqr"]
+[gd_scene load_steps=30 format=3 uid="uid://cbe1x85doqqqr"]
 
 [ext_resource type="PackedScene" uid="uid://bar30lhtf2mw0" path="res://player/player.tscn" id="1_524t7"]
+[ext_resource type="Script" path="res://main.gd" id="1_fgtyd"]
 [ext_resource type="PackedScene" uid="uid://dxfg5bgr2q50w" path="res://systems/mob_spawner.tscn" id="2_7l62g"]
 [ext_resource type="PackedScene" uid="uid://26t4cwkbe6oi" path="res://ui/game_ui.tscn" id="3_5d2tn"]
 [ext_resource type="Texture2D" uid="uid://bk0xolo1vkawg" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="5_viplj"]
@@ -15,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c0iic0l561b0g" path="res://addons/Tiny Swords/Tiny Swords (Update 010)/Resources/Gold Mine/GoldMine_Inactive.png" id="13_8jo2k"]
 [ext_resource type="Script" path="res://systems/difficulty_system.gd" id="14_1813f"]
 [ext_resource type="PackedScene" uid="uid://b4jglmwhg3pff" path="res://ui/game_over_ui.tscn" id="15_j1ktg"]
+[ext_resource type="PackedScene" uid="uid://h3p2y6i8rotq" path="res://misc/meat.tscn" id="17_6ckbl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5o2g8"]
 texture = ExtResource("5_viplj")
@@ -107,8 +109,11 @@ size = Vector2(986.125, 2761)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_in0bq"]
 size = Vector2(1158, 2731.75)
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("game_ui")]
 y_sort_enabled = true
+script = ExtResource("1_fgtyd")
+game_ui = NodePath("GameUI")
+game_over_ui_template = ExtResource("15_j1ktg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(697, 376)
@@ -321,4 +326,23 @@ initial_spawn_rate = 30.0
 spawn_rate_per_minute = 60.0
 break_intensity = 0.33
 
-[node name="GameOverUI" parent="." instance=ExtResource("15_j1ktg")]
+[node name="Meat" parent="." instance=ExtResource("17_6ckbl")]
+position = Vector2(181, 617)
+
+[node name="Meat2" parent="." instance=ExtResource("17_6ckbl")]
+position = Vector2(-1799, 1390)
+
+[node name="Meat3" parent="." instance=ExtResource("17_6ckbl")]
+position = Vector2(-1864, 41)
+
+[node name="Meat4" parent="." instance=ExtResource("17_6ckbl")]
+position = Vector2(-966, 151)
+
+[node name="Meat5" parent="." instance=ExtResource("17_6ckbl")]
+position = Vector2(1164, 234)
+
+[node name="Meat6" parent="." instance=ExtResource("17_6ckbl")]
+position = Vector2(966, 1583)
+
+[node name="Meat7" parent="." instance=ExtResource("17_6ckbl")]
+position = Vector2(-312, 1763)
