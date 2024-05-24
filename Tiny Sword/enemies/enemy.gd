@@ -7,6 +7,12 @@ extends Node2D
 var damage_digite_prefab : PackedScene
 @onready var damage_digit_marker =  $DamageDigiteMarker
 
+@export_category("Drops")
+@export var drop_chance: float = 0.1
+@export var drop_items: Array[PackedScene]
+@export var drop_chances: Array[float]
+
+
 func _ready():
 	damage_digite_prefab = preload("res://misc/damage_digit.tscn")
 
@@ -37,12 +43,27 @@ func damage(amount: int) -> void:
 		die()
 	
 func die() -> void:
+	# Caveira
 	if death_prefab:
 		var death_object = death_prefab.instantiate()
 		death_object.position = position
 		get_parent().add_child(death_object)
-		
+	# Drop
+	#if randf() <= drop_chance:
+		#drop_item()
+	
+	# Incrementar contatodor
+	GameManager.monster_defeated_counter += 1
+	
+	# Deletar node 		
 	queue_free()	
 		
-
+#func drop_item() -> void:
+	#var drop = get_random_drop_item().instantiate()
+	#drop.position = position
+	#get_parent().add_child(drop)
+	
+	
+	
+		
 
